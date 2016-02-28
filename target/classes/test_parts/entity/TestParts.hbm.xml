@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 27, 2016 7:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="test_parts.entity.TestParts" table="test_parts" catalog="test" optimistic-lock="version">
+        <id name="testPartId" type="java.lang.Integer">
+            <column name="test_part_id" />
+            <generator class="identity" />
+        </id>
+        <property name="testPartName" type="string">
+            <column name="test_part_name" length="200" not-null="true" />
+        </property>
+        <property name="testPartDesc" type="string">
+            <column name="test_part_desc" length="1000" not-null="true" />
+        </property>
+        <property name="testPartPrice" type="double">
+            <column name="test_part_price" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
